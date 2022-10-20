@@ -1,0 +1,46 @@
+.header {
+    grid-area: header;
+    height: 50px;
+
+    display: grid;
+    grid-template-areas: "burger name en";
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.burger {
+    font-size: 16px;
+
+    grid-area: burger;
+
+    display: grid;
+    grid-template-areas: "project aboutMe contact";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 8px;
+    justify-self: start;
+}
+
+.project {
+    grid-area: project;
+    justify-self: start;
+}
+
+.aboutMe {
+    grid-area: aboutMe;
+    justify-self: center;
+}
+
+.contact {
+    grid-area: contact;
+    justify-self: end;
+}
+
+.name {
+    grid-area: name;
+    justify-self: center;
+}
+
+.en {
+    grid-area: en;
+    justify-self: end;
+}
