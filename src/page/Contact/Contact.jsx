@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Contact.module.scss";
+import classes from "./StContact.module.scss";
 import backImg from "../../img/ContactWeb.jpg";
 
 const Contact = () => {

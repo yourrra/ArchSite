@@ -18,6 +18,9 @@
     text-decoration: none;
     color: black;
     font-size: 20px;
+    @media (max-width: 426px) {
+        display: none;
+    }
 }
 
 .burger {
@@ -58,6 +61,5 @@
 
     @media (max-width: 426px) {
         display: none;
-        color: rgb(195, 13, 13);
     }
 }
