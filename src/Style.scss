@@ -1,0 +1,30 @@
+.app-wrapper {
+    min-height: 100vh;
+    display: grid;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+
+    gap: 50px;
+    grid-template-columns: 1150px;
+    grid-template-rows: 50px 1fr 50px;
+
+    @media (max-width: 1025px) {
+        grid-template-columns: 750px;
+    }
+
+    @media (max-width: 426px) {
+        grid-template-columns: 350px;
+    }
+}
+
+body {
+    background: rgb(255, 255, 255);
+    margin: 0 15px;
+    padding: 0;
+}

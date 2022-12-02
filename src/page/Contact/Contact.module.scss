@@ -1,0 +1,27 @@
+.hrefBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.hrefStyle {
+    text-decoration: none;
+    color: black;
+}
+
+.wrapperContact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactBlock {
+    /* background: teal; */
+}
+
+h2 {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.imgBlock {
+}

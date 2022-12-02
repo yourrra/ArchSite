@@ -1,0 +1,63 @@
+.header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-areas: "burger name en";
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    @media (max-width: 426px) {
+        grid-template-areas: "burger name";
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.name {
+    grid-area: name;
+    justify-self: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.burger {
+    grid-area: burger;
+    font-size: 16px;
+
+    display: grid;
+    grid-template-areas: "project about contact";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    justify-self: start;
+
+    .project {
+        grid-area: project;
+        justify-self: start;
+        text-decoration: none;
+        color: black;
+    }
+
+    .aboutMe {
+        grid-area: about;
+        justify-self: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .contact {
+        grid-area: contact;
+        justify-self: end;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.en {
+    grid-area: en;
+    justify-self: end;
+
+    @media (max-width: 426px) {
+        display: none;
+        color: rgb(195, 13, 13);
+    }
+}

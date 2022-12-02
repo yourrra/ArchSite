@@ -1,11 +1,34 @@
 import React from "react";
-import classes from "./content.module.css";
+// import classes from "./Content.module.scss";
+import classes from "./StCon.module.scss";
+import "./../../Style.scss";
+import CardRender from "./cardRender/CardRender";
 
 const Content = (props) => {
     return (
-        <header className={classes.content}>
-            <h2>Alex</h2>
-        </header>
+        <div className={classes.cardRender}>
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+            <CardRender />
+        </div>
     );
 };
 

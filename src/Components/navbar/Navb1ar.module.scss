@@ -1,11 +1,15 @@
 .header {
     grid-area: header;
-    height: 50px;
+    /* height: 50px; */
 
     display: grid;
     grid-template-areas: "burger name en";
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+
+    @media (max-width: 426) {
+        grid-template-areas: "burger name";
+    }
 }
 
 .burger {
@@ -23,24 +27,37 @@
 .project {
     grid-area: project;
     justify-self: start;
+    text-decoration: none;
+    color: black;
 }
 
 .aboutMe {
     grid-area: aboutMe;
     justify-self: center;
+    text-decoration: none;
+    color: black;
 }
 
 .contact {
     grid-area: contact;
     justify-self: end;
+    text-decoration: none;
+    color: black;
 }
 
 .name {
     grid-area: name;
     justify-self: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
 
 .en {
     grid-area: en;
     justify-self: end;
+
+    @media (max-width: 426) {
+        display: none;
+    }
 }
