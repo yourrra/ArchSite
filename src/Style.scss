@@ -12,7 +12,7 @@
 
     gap: 50px;
     grid-template-columns: 1150px;
-    grid-template-rows: 50px 1fr 50px;
+    grid-template-rows: 50px 1fr 80px;
 
     @media (max-width: 1025px) {
         grid-template-columns: 750px;

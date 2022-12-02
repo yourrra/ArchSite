@@ -1,8 +1,7 @@
 import React from "react";
-// import classes from "./Content.module.scss";
-import classes from "./StCon.module.scss";
+import classes from "./StProject.module.scss";
 import "./../../Style.scss";
-import CardRender from "./cardRender/CardRender";
+import CardRender from "../../components/cardRender/CardRender";
 
 const Content = (props) => {
     return (

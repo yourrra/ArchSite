@@ -1,0 +1,90 @@
+.footer {
+    grid-area: footer;
+
+    display: grid;
+    grid-template-areas: "links info dev";
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.linkslist {
+    grid-area: links;
+
+    display: grid;
+    grid-template-rows: repeat(3, 15px);
+    grid-template-areas:
+        "project"
+        "about"
+        "contact";
+    gap: 5px;
+
+    .project {
+        grid-area: project;
+        justify-self: start;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+
+    .aboutMe {
+        grid-area: about;
+        justify-self: start;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+
+    .contact {
+        grid-area: contact;
+        justify-self: start;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+}
+
+.infolist {
+    grid-area: info;
+
+    display: grid;
+    grid-template-rows: 15px 19px;
+    grid-template-areas:
+        "email"
+        "phone";
+    gap: 5px;
+
+    .emailStyle {
+        grid-area: email;
+
+        text-align: center;
+        font-size: 14px;
+    }
+    .phonelStyle {
+        grid-area: phone;
+
+        text-align: center;
+    }
+}
+
+.devList {
+    grid-area: dev;
+
+    display: grid;
+    grid-template-rows: 15px 19px;
+    grid-template-areas:
+        "devW"
+        "devN";
+    gap: 5px;
+
+    .devWord {
+        grid-area: devW;
+
+        text-align: end;
+        font-size: 14px;
+    }
+    .devName {
+        grid-area: devN;
+
+        text-align: end;
+        font-size: 19px;
+    }
+}

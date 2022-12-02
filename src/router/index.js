@@ -1,4 +1,4 @@
-import Content from "../components/content/Content";
+import Content from "../page/project/Project";
 import AboutMe from "../page/aboutMe/AboutMe";
 import Contact from "../page/Contact/Contact";
 
