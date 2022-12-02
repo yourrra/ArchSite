@@ -1,0 +1,30 @@
+h2 {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.wrapperAbout {
+    display: grid;
+
+    grid-template-columns: 1fr 750px;
+    gap: 50px;
+
+    @media (max-width: 1025px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.imgBlock {
+    background: url("../../img/AboutWeb.jpg");
+    width: 750px;
+    height: 530px;
+    @media (max-width: 1025px) {
+        background: url("../../img/AboutWeb_tablet.jpg");
+        width: 350px;
+        height: 750px;
+    }
+    @media (max-width: 426px) {
+        display: none;
+    }
+}

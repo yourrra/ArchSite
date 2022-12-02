@@ -9,19 +9,14 @@
 }
 
 .wrapperContact {
-    // display: flex;
-    // justify-content: space-between;
     display: grid;
 
-    grid-template-columns: 1fr 800px;
+    grid-template-columns: 350px 750px;
     gap: 50px;
 
     @media (max-width: 1025px) {
-        grid-template-columns: 1fr 500px;
+        grid-template-columns: 350px 350px;
     }
-}
-
-.contactBlock {
 }
 
 h2 {
@@ -31,10 +26,14 @@ h2 {
 }
 
 .imgBlock {
+    background: url("../../img/ContactWeb.jpg");
+    width: 750px;
+    height: 530px;
+
     @media (max-width: 1025px) {
-        img {
-            width: 500px;
-        }
+        background: url("../../img/ContactWeb_tablet.jpg");
+        width: 350px;
+        height: 750px;
     }
     @media (max-width: 426px) {
         display: none;

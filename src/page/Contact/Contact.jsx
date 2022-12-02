@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./StContact.module.scss";
-import backImg from "../../img/ContactWeb.jpg";
+import backContactImg from "../../img/ContactWeb.jpg";
 
 const Contact = () => {
     return (
@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className={classes.imgBlock}>
-                <img src={backImg} alt="Back" />
+                {/* <img src={backContactImg} alt="Back" /> */}
             </div>
         </div>
     );
