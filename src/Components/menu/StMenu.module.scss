@@ -1,0 +1,46 @@
+.menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all 0.4s;
+
+    .active {
+        visibility: visible;
+        opacity: 100;
+        transition: all 0.6s;
+
+        transform: translateX(+10%);
+    }
+}
+
+.menuContent {
+    font-size: 16px;
+
+    display: grid;
+    grid-template-areas: "project about contact";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    justify-self: start;
+    transition: all 0.6s;
+
+    .project {
+        grid-area: project;
+        justify-self: start;
+        text-decoration: none;
+        color: black;
+    }
+
+    .aboutMe {
+        grid-area: about;
+        justify-self: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .contact {
+        grid-area: contact;
+        justify-self: end;
+        text-decoration: none;
+        color: black;
+    }
+}

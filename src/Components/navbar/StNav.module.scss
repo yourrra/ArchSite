@@ -1,10 +1,13 @@
 .header {
     grid-area: header;
+    background: white;
 
     display: grid;
     grid-template-areas: "burger name en";
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    position: sticky;
+    top: 0px;
 
     @media (max-width: 426px) {
         grid-template-areas: "burger name";
@@ -23,43 +26,67 @@
     }
 }
 
-.burger {
-    grid-area: burger;
-    font-size: 16px;
-
-    display: grid;
-    grid-template-areas: "project about contact";
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    justify-self: start;
-
-    .project {
-        grid-area: project;
-        justify-self: start;
-        text-decoration: none;
-        color: black;
-    }
-
-    .aboutMe {
-        grid-area: about;
-        justify-self: center;
-        text-decoration: none;
-        color: black;
-    }
-
-    .contact {
-        grid-area: contact;
-        justify-self: end;
-        text-decoration: none;
-        color: black;
-    }
-}
-
 .en {
     grid-area: en;
     justify-self: end;
 
     @media (max-width: 426px) {
         display: none;
+    }
+}
+
+.burger {
+    grid-area: burger;
+    font-size: 16px;
+
+    display: grid;
+    grid-template-areas: "brBtn menu";
+    grid-template-columns: 20px 1fr;
+    gap: 20px;
+    justify-self: start;
+}
+
+.burBtn {
+    grid-area: brBtn;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.burBtn span {
+    content: "";
+    position: absolute;
+    top: 9px;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.burBtn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.btnSt {
+    transform: rotate(90deg);
+    transition: all 0.4s;
+
+    .active {
+        transform: rotate(0deg);
+        transition: all 0.4s;
     }
 }

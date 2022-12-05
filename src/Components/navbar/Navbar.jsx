@@ -1,20 +1,38 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Menu from "../menu/Menu";
 import classes from "./StNav.module.scss";
 
 const Navbar = (props) => {
+    const [menuActive, setMenuActive] = useState(false);
+    const [btnActive, setBtnActive] = useState(true);
+
+    const items = [
+        { value: "Project", link: "/project" },
+        { value: "About me", link: "/about" },
+        { value: "Contact", link: "/contact" },
+    ];
+
     return (
         <header className={classes.header}>
             <div className={classes.burger}>
-                <Link className={classes.project} to="/project">
-                    Project
-                </Link>
-                <Link className={classes.aboutMe} to="/about">
-                    About me
-                </Link>
-                <Link className={classes.contact} to="/contact">
-                    Contact
-                </Link>
+                <div
+                    className={btnActive ? classes.btnSt.active : classes.btnSt}
+                    onClick={() => setBtnActive(!btnActive)}
+                >
+                    <div
+                        className={classes.burBtn}
+                        onClick={() => setMenuActive(!menuActive)}
+                    >
+                        <span />
+                    </div>
+                </div>
+                <Menu
+                    active={menuActive}
+                    setActive={setMenuActive}
+                    items={items}
+                />
             </div>
             <Link to="/project" className={classes.name}>
                 Alexander Moskovchenko
