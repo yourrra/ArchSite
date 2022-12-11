@@ -3,14 +3,12 @@
     opacity: 0;
     transform: translateX(-10%);
     transition: all 0.4s;
+}
 
-    .active {
-        visibility: visible;
-        opacity: 100;
-        transition: all 0.6s;
-
-        transform: translateX(+10%);
-    }
+.menuActive {
+    visibility: visible;
+    opacity: 100;
+    transition: all 0.6s;
 }
 
 .menuContent {

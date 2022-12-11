@@ -6,7 +6,7 @@ import classes from "./StNav.module.scss";
 
 const Navbar = (props) => {
     const [menuActive, setMenuActive] = useState(false);
-    const [btnActive, setBtnActive] = useState(true);
+    const [btnActive, setBtnActive] = useState(false);
 
     const items = [
         { value: "Project", link: "/project" },
@@ -18,7 +18,7 @@ const Navbar = (props) => {
         <header className={classes.header}>
             <div className={classes.burger}>
                 <div
-                    className={btnActive ? classes.btnSt.active : classes.btnSt}
+                    className={btnActive ? classes.btnSActive : classes.btnSt}
                     onClick={() => setBtnActive(!btnActive)}
                 >
                     <div
