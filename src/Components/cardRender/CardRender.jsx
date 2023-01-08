@@ -3,14 +3,29 @@ import { useState } from "react";
 import Modal from "../modal/Modal";
 import classes from "./StCardRender.module.scss";
 
-const CardRender = ({ preview }) => {
+const CardRender = ({ img, name, year, imgBig }) => {
     const [modalActive, setModalActive] = useState(false);
 
     return (
-        <div className={classes.render}>
-            <div className={classes.test}></div>
-            <img src={"s"} alt="Avatar" onClick={() => setModalActive(true)} />
-            <Modal active={modalActive} setActive={setModalActive} />
+        <div>
+            <div className={classes.render}>
+                <img
+                    src={img}
+                    alt="Avatar"
+                    onClick={() => setModalActive(true)}
+                />
+                <Modal
+                    active={modalActive}
+                    setActive={setModalActive}
+                    imgBig={imgBig}
+                    name={name}
+                    year={year}
+                />
+            </div>
+            <div className={classes.nameProject}>
+                <div className={classes.nameProject__name}>{name}</div>
+                <div className={classes.nameProject__year}>{year}</div>
+            </div>
         </div>
     );
 };

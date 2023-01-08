@@ -1,11 +1,37 @@
+$text-color-black: rgba(40, 40, 40, 1);
+$text-color-light-gray: rgba(136, 136, 136, 1);
+
 .render {
     background: black;
     width: 350px;
     height: 350px;
     color: azure;
     cursor: pointer;
+    z-index: 3;
 }
 
-.test {
-    color: aqua;
+.nameProject {
+    z-index: 1;
+
+    transform: translateY(-20px);
+    transition: all 0.3s;
+
+    opacity: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    .nameProject__name {
+        color: $text-color-black;
+    }
+    .nameProject__year {
+        color: $text-color-light-gray;
+    }
+}
+
+.render:hover ~ .nameProject {
+    transform: translateY(5px);
+    transition: all 0.3s;
+
+    opacity: 100;
 }

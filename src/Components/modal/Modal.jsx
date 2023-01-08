@@ -1,16 +1,23 @@
 import React from "react";
 import classes from "./StModal.module.scss";
 
-const Modal = ({ active, setActive }) => {
+const Modal = ({ active, setActive, imgBig, name, year }) => {
     return (
         <div
             className={active ? classes.modalActive : classes.modal}
             onClick={() => setActive(false)}
         >
-            <div
+            <img
+                src={imgBig}
+                alt="Avatar"
                 className={classes.modalContent}
                 onClick={(e) => e.stopPropagation()}
-            ></div>
+            />
+            <div className={classes.projectInfo}>
+                <div className={classes.projectInfo__count}>01|10</div>
+                <div className={classes.projectInfo__name}>{name}</div>
+                <div className={classes.projectInfo__year}>{year}</div>
+            </div>
         </div>
     );
 };

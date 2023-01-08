@@ -1,3 +1,6 @@
+$text-color-black: rgba(40, 40, 40, 1);
+$text-color-gray: rgba(90, 90, 90, 1);
+
 .modal {
     height: 100%;
     width: 100%;
@@ -11,13 +14,18 @@
     opacity: 0;
     pointer-events: none;
     transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .modalActive {
     height: 100%;
     width: 100%;
-    background: rgba($color: #000000, $alpha: 0.4);
+    backdrop-filter: blur(4px);
+    background: rgba($color: #686868, $alpha: 0.4);
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     display: flex;
@@ -26,11 +34,41 @@
     opacity: 1;
     pointer-events: all;
     transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modalContent {
-    padding: 20px;
+    // position: relative;
+    // z-index: 9999;
+    padding: 0px;
     background: rgb(255, 255, 255);
-    height: 200px;
-    width: 400px;
+    height: 800px;
+    // width: 400px;
+
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.3);
+}
+
+.projectInfo {
+    margin-top: 20px;
+
+    .projectInfo__count {
+        color: $text-color-gray;
+        font-size: 15px;
+        text-align: center;
+    }
+    .projectInfo__name {
+        margin-top: 3px;
+        color: $text-color-black;
+        font-size: 20px;
+        text-align: center;
+    }
+    .projectInfo__year {
+        margin-top: 5px;
+        color: $text-color-gray;
+        font-size: 15px;
+        text-align: center;
+    }
 }
