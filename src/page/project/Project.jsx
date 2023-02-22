@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./StProject.module.scss";
 import "./../../Style.scss";
-import CardRender from "../../components/cardRender/CardRender";
+import CardRender from "../../Components/cardRender/CardRender";
 // import pic from "../../img/pr1/project1.jpg";
 
 const Content = (props) => {
