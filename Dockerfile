@@ -1,14 +1,14 @@
 FROM node:16.5
 
-WORKDIR /home/node/appmain
+WORKDIR /home/node/archsite
 
 COPY package*.json ./
 
 
-RUN npm i
-RUN npm run build
+RUN npm ci
 
 COPY . .
+RUN npm run build
 
 
 CMD [ "npm", "run", "start" ]

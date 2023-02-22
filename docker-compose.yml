@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000
-    command: bash -c "npm run start"
+    command: bash -c "npm run build && npm run start"
     restart: always
     networks:
       - rabbitmq_go_net
@@ -19,8 +19,10 @@ services:
     ports:
      - "8080:80"
     environment:
-     - NGINX_HOST=foobar.com
+     - NGINX_HOST=83.136.233.209
      - NGINX_PORT=80
+    networks:
+      - rabbitmq_go_net
 
 networks:
   rabbitmq_go_net:
