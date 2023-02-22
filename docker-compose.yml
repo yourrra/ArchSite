@@ -1,0 +1,27 @@
+version: '3.0'
+
+services:
+  archsite:
+    container_name: archsite
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    command: bash -c "npm run start"
+    restart: always
+    networks:
+      - rabbitmq_go_net
+  web:
+    image: nginx
+    volumes:
+     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+     - "8080:80"
+    environment:
+     - NGINX_HOST=foobar.com
+     - NGINX_PORT=80
+
+networks:
+  rabbitmq_go_net:
+    driver: bridge
