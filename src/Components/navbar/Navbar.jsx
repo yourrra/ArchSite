@@ -3,16 +3,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "../menu/Menu";
 import classes from "./StNav.module.scss";
+import burger from "../../img/button/burgerButton.jpg";
 
 const Navbar = (props) => {
     const [menuActive, setMenuActive] = useState(false);
     const [btnActive, setBtnActive] = useState(false);
-
-    const items = [
-        { value: "Project", link: "/project" },
-        { value: "About me", link: "/about" },
-        { value: "Contact", link: "/contact" },
-    ];
 
     return (
         <header className={classes.header}>
@@ -21,18 +16,15 @@ const Navbar = (props) => {
                     className={btnActive ? classes.btnSActive : classes.btnSt}
                     onClick={() => setBtnActive(!btnActive)}
                 >
-                    <div
+                    <img
+                        src={burger}
+                        alt="burger"
                         className={classes.burBtn}
                         onClick={() => setMenuActive(!menuActive)}
-                    >
-                        <span />
-                    </div>
+                    />
                 </div>
-                <Menu
-                    active={menuActive}
-                    setActive={setMenuActive}
-                    items={items}
-                />
+
+                <Menu active={menuActive} setActive={setMenuActive} />
             </div>
             <Link to="/project" className={classes.name}>
                 Alexander Moskovchenko

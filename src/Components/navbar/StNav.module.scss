@@ -7,11 +7,14 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     position: sticky;
+    width: 100%;
+    height: 50px;
     top: 0px;
 
     @media (max-width: 426px) {
         grid-template-areas: "burger name";
         grid-template-columns: repeat(2, 1fr);
+        z-index: 1;
     }
 }
 
@@ -19,8 +22,11 @@
     grid-area: name;
     justify-self: center;
     text-decoration: none;
-    color: black;
     font-size: 20px;
+    font-weight: 600;
+
+    color: #2e2e2e;
+
     @media (max-width: 426px) {
         display: none;
     }
@@ -38,6 +44,8 @@
 .burger {
     grid-area: burger;
     font-size: 16px;
+    justify-content: center;
+    align-items: center;
 
     display: grid;
     grid-template-areas: "brBtn menu";
@@ -48,8 +56,7 @@
 
 .burBtn {
     grid-area: brBtn;
-    width: 20px;
-    height: 20px;
+
     position: relative;
     cursor: pointer;
 }
@@ -82,11 +89,23 @@
 }
 
 .btnSt {
+    height: 20px;
+    width: 20px;
     transform: rotate(0deg);
     transition: all 0.4s;
 }
 
 .btnSActive {
+    height: 20px;
+    width: 20px;
+
     transform: rotate(90deg);
     transition: all 0.4s;
+}
+
+@media (max-width: 426px) {
+    .btnSt {
+        transform: rotate(90deg);
+        transition: all 0.4s;
+    }
 }

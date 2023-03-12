@@ -10,6 +10,7 @@ const CardRender = ({ img, name, year, imgBig }) => {
         <div>
             <div className={classes.render}>
                 <img
+                    className={classes.render__img}
                     src={img}
                     alt="Avatar"
                     onClick={() => setModalActive(true)}

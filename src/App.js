@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import AppRouter from "./Components/appRouter/AppRouter.jsx";
-import Navbar from "./Components/navbar/Navbar.jsx";
-import Footer from "./Components/Footer/footer.jsx";
+import AppRouter from "./components/appRouter/AppRouter.jsx";
+import Navbar from "./components/navbar/Navbar.jsx";
+import Footer from "./components/footer/Footer.jsx";
 import "./Style.scss";
 
 const App = (props) => {

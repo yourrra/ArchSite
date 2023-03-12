@@ -4,7 +4,11 @@ import classes from "./StModal.module.scss";
 const Modal = ({ active, setActive, imgBig, name, year }) => {
     return (
         <div
-            className={active ? classes.modalActive : classes.modal}
+            className={
+                active && window.innerWidth > 600
+                    ? classes.modalActive
+                    : classes.modal
+            }
             onClick={() => setActive(false)}
         >
             <img
@@ -14,7 +18,6 @@ const Modal = ({ active, setActive, imgBig, name, year }) => {
                 onClick={(e) => e.stopPropagation()}
             />
             <div className={classes.projectInfo}>
-                <div className={classes.projectInfo__count}>01|10</div>
                 <div className={classes.projectInfo__name}>{name}</div>
                 <div className={classes.projectInfo__year}>{year}</div>
             </div>

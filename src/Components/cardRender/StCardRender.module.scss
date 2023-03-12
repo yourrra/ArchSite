@@ -2,17 +2,14 @@ $text-color-black: rgba(40, 40, 40, 1);
 $text-color-light-gray: rgba(136, 136, 136, 1);
 
 .render {
-    background: black;
     width: 350px;
     height: 350px;
     color: azure;
     cursor: pointer;
-    z-index: 3;
+    // position: relative;
 }
 
 .nameProject {
-    z-index: 1;
-
     transform: translateY(-20px);
     transition: all 0.3s;
 
@@ -34,4 +31,16 @@ $text-color-light-gray: rgba(136, 136, 136, 1);
     transition: all 0.3s;
 
     opacity: 100;
+}
+
+.render__img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 426px) {
+    .nameProject {
+        transform: translateY(5px);
+        opacity: 1;
+    }
 }
